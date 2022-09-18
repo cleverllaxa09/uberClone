@@ -1,19 +1,13 @@
-import React from "react";
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Provider } from "react-redux";
-
-
+import { Provider } from 'react-redux';
+import { store } from './store';
+import HomeScreen from './screens/HomeScreen';
 export default function App() {
-  state ={
-    count:0
-  }
   return (
-    <Provider store={}>    
-      <View style={styles.container}>
-        <Text>Let build {this.state.count}</Text>
-      </View>
+    <Provider store={store}>
+      <HomeScreen />
     </Provider>
-
   );
 }
 
